@@ -1,1 +1,1 @@
-{"root":["./src/main.ts","./src/vite-env.d.ts","./src/components/client-component/clientcomponent.tsx","./src/components/server-component/servercomponent.tsx"],"version":"5.7.3"}
+{"root":["./src/main.ts","./src/vite-env.d.ts","./src/components/client-component/clientcomponent.tsx","./src/components/server-component/servercomponent.tsx","./src/stories/clientcomponent.stories.ts","./src/stories/servercomponent.stories.ts"],"version":"5.7.3"}
