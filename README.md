@@ -29,6 +29,20 @@ npm install
 Este nombre lo encontramos en el `package.json`.
 Para deslinkear el package, correr `npm unlink @egodesign/ui-kit`
 
+**IMPORTANTE:** En proyectos de Nextjs que usen Turbopack, debemos agregar este codigo para que nos permita trabajar con archivos por fuera del proyecto:
+
+```javascript
+import type { NextConfig } from 'next';
+import path from 'node:path';
+
+const nextConfig: NextConfig = {
+    /* config options here */
+    outputFileTracingRoot: path.join(__dirname, '../'),
+};
+
+export default nextConfig;
+```
+
 ## Publicar en NPM
 ```bash
   npm version patch
