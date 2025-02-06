@@ -1,9 +1,21 @@
 .client-component {
     display: flex;
+    gap: 2rem;
     flex-direction: column;
-    padding: 2rem;
+    padding: 2rem 2rem 1.5rem;
     justify-content: center;
     align-items: center;
-    border-radius: 10px;
-    background-color: lightblue;
+    border-radius: 1rem;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+
+    button {
+        border: 1px solid black;
+        padding: 0.5rem 1rem;
+        border-radius: 12px;
+        cursor: pointer;
+
+        &:hover {
+            background-color: #00000008;
+        }
+    }
 }

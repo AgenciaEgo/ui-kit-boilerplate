@@ -1,10 +1,12 @@
 .server-component {
     display: flex;
+    gap: 2rem;
+    background-color: #191919;
+    color: rgb(232, 232, 232);
     flex-direction: column;
     padding: 2rem;
     justify-content: center;
     align-items: center;
-    border-radius: 10px;
-    color: white;
-    background-color: gray;
+    border-radius: 1rem;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }

@@ -1,23 +1,23 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
-import { ServerComponent } from '../components/server-component/ServerComponent';
+import { ClientComponent } from './ClientComponent';
 
 const meta = {
-    title: 'ServerComponent',
-    component: ServerComponent,
+    title: 'ClientComponent',
+    component: ClientComponent,
     parameters: {
         layout: 'centered',
     },
     tags: ['autodocs'],
     argTypes: {},
     args: {},
-} satisfies Meta<typeof ServerComponent>;
+} satisfies Meta<typeof ClientComponent>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
     args: {
-        label: 'Some Label!',
+        label: 'Client Component',
     },
 };
