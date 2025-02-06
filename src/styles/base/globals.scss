@@ -1,0 +1,192 @@
+@use "./reset.scss";
+// @use '@/styles/utilities/variables.scss' as v;
+// @use "@/styles/utilities/modifiers.scss" as m;
+
+html {
+	max-width: 100vw;
+	overflow-x: hidden;
+}
+
+body {
+	overflow: visible;
+	max-width: 100vw;
+    min-height: 100vh;
+}
+
+html:has(.modal-overlay) {
+    overflow: hidden !important;
+}
+
+/*  ==========================================================================
+    Responsive Padding utilities
+    ==========================================================================  */
+$spacing-sizes-lowerthansm: (
+    0: 0,
+    0_5: calc(0.5rem / 2),
+    1: calc(1rem / 2),
+    1_5: calc(1.5rem / 2),
+    2: calc(2rem / 2),
+    3: calc(3rem / 2),
+    4: calc(4rem / 2),
+    5: calc(5rem / 2),
+    6: calc(6rem / 2),
+    7: calc(7rem / 2),
+    8: calc(8rem / 2),
+    10: calc(10rem / 2),
+    15: calc(15rem / 2),
+);
+$spacing-sizes-biggerthansm: (
+    0: 0,
+    0_5: 0.5rem,
+    1: 1rem,
+    1_5: 1.5rem,
+    2: 2rem,
+    3: 3rem,
+    4: 4rem,
+    5: 5rem,
+    6: 6rem,
+    7: 7.5rem,
+    8: 8rem,
+    10: 10rem,
+    15: 15rem,
+);
+$breakpoints: (
+    lowerthansm: "(max-width: 639px)",
+    biggerthansm: "(min-width: 640px)",
+);
+
+@each $breakpoint-name, $breakpoint-value in $breakpoints {
+    @media #{$breakpoint-value} {
+        @if $breakpoint-name == "lowerthansm" {
+            @each $size-key, $size-value in $spacing-sizes-lowerthansm {
+                /*  Responsive Margin utilities
+                    ==========================================================================  */
+                .m-#{$size-key} {
+                    margin: $size-value !important;
+                }
+
+                .mt-#{$size-key} {
+                    margin-top: $size-value !important;
+                }
+
+                .mr-#{$size-key} {
+                    margin-right: $size-value !important;
+                }
+
+                .mb-#{$size-key} {
+                    margin-bottom: $size-value !important;
+                }
+
+                .ml-#{$size-key} {
+                    margin-left: $size-value !important;
+                }
+
+                .mx-#{$size-key} {
+                    margin-right: $size-value !important;
+                    margin-left: $size-value !important;
+                }
+
+                .my-#{$size-key} {
+                    margin-top: $size-value !important;
+                    margin-bottom: $size-value !important;
+                }
+
+                /*  Responsive Padding utilities
+                    ==========================================================================  */
+                .p-#{$size-key} {
+                    padding: $size-value !important;
+                }
+
+                .pt-#{$size-key} {
+                    padding-top: $size-value !important;
+                }
+
+                .pr-#{$size-key} {
+                    padding-right: $size-value !important;
+                }
+
+                .pb-#{$size-key} {
+                    padding-bottom: $size-value !important;
+                }
+
+                .pl-#{$size-key} {
+                    padding-left: $size-value !important;
+                }
+
+                .px-#{$size-key} {
+                    padding-right: $size-value !important;
+                    padding-left: $size-value !important;
+                }
+
+                .py-#{$size-key} {
+                    padding-top: $size-value !important;
+                    padding-bottom: $size-value !important;
+                }
+            }
+        } @else if $breakpoint-name == "biggerthansm" {
+            @each $size-key, $size-value in $spacing-sizes-biggerthansm {
+                // Responsive Margin utilities
+                .m-#{$size-key} {
+                    margin: $size-value !important;
+                }
+
+                .mt-#{$size-key} {
+                    margin-top: $size-value !important;
+                }
+
+                .mr-#{$size-key} {
+                    margin-right: $size-value !important;
+                }
+
+                .mb-#{$size-key} {
+                    margin-bottom: $size-value !important;
+                }
+
+                .ml-#{$size-key} {
+                    margin-left: $size-value !important;
+                }
+
+                .mx-#{$size-key} {
+                    margin-right: $size-value !important;
+                    margin-left: $size-value !important;
+                }
+
+                .my-#{$size-key} {
+                    margin-top: $size-value !important;
+                    margin-bottom: $size-value !important;
+                }
+
+                // Responsive Padding utilities
+                .p-#{$size-key} {
+                    padding: $size-value !important;
+                }
+
+                .pt-#{$size-key} {
+                    padding-top: $size-value !important;
+                }
+
+                .pr-#{$size-key} {
+                    padding-right: $size-value !important;
+                }
+
+                .pb-#{$size-key} {
+                    padding-bottom: $size-value !important;
+                }
+
+                .pl-#{$size-key} {
+                    padding-left: $size-value !important;
+                }
+
+                .px-#{$size-key} {
+                    padding-right: $size-value !important;
+                    padding-left: $size-value !important;
+                }
+
+                .py-#{$size-key} {
+                    padding-top: $size-value !important;
+                    padding-bottom: $size-value !important;
+                }
+            }
+        }
+    }
+}
